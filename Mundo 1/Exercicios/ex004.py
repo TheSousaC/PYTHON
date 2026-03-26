@@ -1,0 +1,10 @@
+Algo = input('Digite Algo: ')
+# nao acompanhei a aula direito AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+print('O tipo é: ',type(Algo))
+print('Só tem Espaços? ',Algo.isspace())
+print('É um número? ',Algo.isnumeric())
+print('É Alfabetico? ', Algo.isalpha())
+print('É alfanumerico? ', Algo.isalnum())
+print('Está em Maisuclo?', Algo.isupper())
+print('Está em Minusculo?', Algo.islower())
+print('Está capitalaizada?', Algo.istitle())

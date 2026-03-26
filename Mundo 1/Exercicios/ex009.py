@@ -1,0 +1,12 @@
+Num = int(input('Digite um Número: '))
+
+print('1 * {} = {}'.format(Num, Num * 1))
+print('2 * {} = {}'.format(Num, Num * 2))
+print('3 * {} = {}'.format(Num, Num * 3))
+print('4 * {} = {}'.format(Num, Num * 4))
+print('5 * {} = {}'.format(Num, Num * 5))
+print('6 * {} = {}'.format(Num, Num * 6))
+print('7 * {} = {}'.format(Num, Num * 7))
+print('8 * {} = {}'.format(Num, Num * 8))
+print('9 * {} = {}'.format(Num, Num * 9))
+print('10 * {} = {}'.format(Num, Num * 10))
