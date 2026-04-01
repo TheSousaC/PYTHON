@@ -1,1 +1,1 @@
-#from playsound import playsound
+# impossivel fazer <- pq eu tbm nao quero
