@@ -19,7 +19,7 @@ Frase.find("amo")
 
 Frase.replace("risole", "Salgado")
 
-#uper() deixa td maiusculo
+#upper() deixa td maiusculo
 #lower() deixa td minusculo
 #capitalize() só o primeiro vai ser maiusculo
 #title() vai analizar quantas palavras tem

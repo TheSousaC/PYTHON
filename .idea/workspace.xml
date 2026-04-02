@@ -31,37 +31,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.aula008a.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex010.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex011.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex012.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex013.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex014.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex015.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex016.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex017.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex018.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex019.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ex020.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alunoinfo/Desktop/PYTHON&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.aula008a.executor": "Run",
+    "Python.ex010.executor": "Run",
+    "Python.ex011.executor": "Run",
+    "Python.ex012.executor": "Run",
+    "Python.ex013.executor": "Run",
+    "Python.ex014.executor": "Run",
+    "Python.ex015.executor": "Run",
+    "Python.ex016.executor": "Run",
+    "Python.ex017.executor": "Run",
+    "Python.ex018.executor": "Run",
+    "Python.ex019.executor": "Run",
+    "Python.ex020.executor": "Run",
+    "Python.ex022.executor": "Run",
+    "Python.ex023.executor": "Run",
+    "Python.ex024.executor": "Run",
+    "Python.ex026.executor": "Run",
+    "Python.ex027.executor": "Run",
+    "Python.ex25.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/alunoinfo/Desktop/PYTHON",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="ex015" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PYTHON" />
@@ -109,6 +115,8 @@
       <workItem from="1774956226545" duration="4562000" />
       <workItem from="1774987673024" duration="1605000" />
       <workItem from="1775074153484" duration="2111000" />
+      <workItem from="1775133117574" duration="2391000" />
+      <workItem from="1775149468956" duration="1575000" />
     </task>
     <servers />
   </component>
@@ -140,13 +148,19 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PYTHON$ex020.coverage" NAME="ex020 Coverage Results" MODIFIED="1774988058967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
+    <SUITE FILE_PATH="coverage/PYTHON$ex023.coverage" NAME="ex023 Coverage Results" MODIFIED="1775134549614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
+    <SUITE FILE_PATH="coverage/PYTHON$ex026.coverage" NAME="ex026 Coverage Results" MODIFIED="1775150704163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex014.coverage" NAME="ex014 Coverage Results" MODIFIED="1774528261352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex016.coverage" NAME="ex016 Coverage Results" MODIFIED="1774959554984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex011.coverage" NAME="ex011 Coverage Results" MODIFIED="1774526096731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
+    <SUITE FILE_PATH="coverage/PYTHON$ex024.coverage" NAME="ex024 Coverage Results" MODIFIED="1775134856868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex019.coverage" NAME="ex019 Coverage Results" MODIFIED="1774960387039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex012.coverage" NAME="ex012 Coverage Results" MODIFIED="1774527082973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex015.coverage" NAME="ex015 Coverage Results" MODIFIED="1774988020494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
+    <SUITE FILE_PATH="coverage/PYTHON$ex25.coverage" NAME="ex25 Coverage Results" MODIFIED="1775134921416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
+    <SUITE FILE_PATH="coverage/PYTHON$ex022.coverage" NAME="ex022 Coverage Results" MODIFIED="1775134004935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex018.coverage" NAME="ex018 Coverage Results" MODIFIED="1774959988155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
+    <SUITE FILE_PATH="coverage/PYTHON$ex027.coverage" NAME="ex027 Coverage Results" MODIFIED="1775151209459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex010.coverage" NAME="ex010 Coverage Results" MODIFIED="1774525429057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$ex013.coverage" NAME="ex013 Coverage Results" MODIFIED="1774527549984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Exercicios" />
     <SUITE FILE_PATH="coverage/PYTHON$aula008a.coverage" NAME="aula008a Coverage Results" MODIFIED="1774958174316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mundo 1/Aulas" />
