@@ -1,18 +1,16 @@
 ## Financiamento de uma casa
 
 valorImovel = float(input('Qual o valor do Imovel? R$'))
-salarioComprador = float(input("Digite seu salário: R$"))
-Anos_parcelas = float(input("Quantos anos deseja pagar: "))
+salario = float(input("Digite seu salário: R$"))
+anos = float(input("Quantos anos deseja pagar: "))
 
+meses = anos * 12
+minimo = (salario * 30) / 100
+prestacao = valorImovel / meses
 
-minimoSalario = salarioComprador * 0.30
-meses = Anos_parcelas / 12
-
-valorParcelas = valorImovel / meses
-
-if valorParcelas <= minimoSalario:
+if prestacao <= minimo:
     print("Financiamento Aprovado!")
-    print(f"Você pagará R${valorParcelas:.2f} em {Anos_parcelas} anos. Pois as parcelas nao passam de 30% de seu salário")
+    print(f"Você pagará R${prestacao:.2f} em {meses} meses. Pois as parcelas nao passam de 30% de seu salário que é {minimo:.3f}.")
 else:
     print("Financiamento Negado")
-    print("Você não pode financiar, pois as parcelas exedem 30% de seu salário")
+    print(f"Você não pode financiar, pois as parcelas exedem 30% de seu salário que é {minimo:.3f}")
