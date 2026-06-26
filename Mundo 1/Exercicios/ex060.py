@@ -2,10 +2,10 @@
 
 from math import factorial
 
-numero = int(input("Digite um número pra fatorar: "))
-fatorial = 1
-
-while numero > 0:
-    fatorial *= numero
-    numero -= 1
-print(fatorial) 
+numero = int(input("Digite um numero entre 0 e 10: "))
+c = numero
+f = factorial(numero)
+while c > 0:
+    print(f"{c}", end="")
+    print(" x " if c > 1 else " = ", end="")
+    c -= 1
