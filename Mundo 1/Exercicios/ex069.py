@@ -24,7 +24,7 @@ while True:
     if pergunta == "N":
         break
 
-if idade > 18:
+if idade >= 18:
     print(f"Temos {velhos} pessoas maiores de 18 cadastrados.")
 if homens == 1:
     print(f"Temos apenas {homens} homem cadastrado.")

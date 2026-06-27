@@ -6,7 +6,7 @@ record = vitorias
 numero = 0
 soma = 0
 
-computador = randint(0, 100)
+computador = randint(0, 11)
 print("Sou seu computador, tente adivinhar se eu pensei em um número impar ou par. HAHAHAHAHAHHAHAHHAHAHAHAHA")
 
 while True:

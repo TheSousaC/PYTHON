@@ -1,16 +1,13 @@
-## tabuada top
+## Tabuada Topzera
 
-numero = 0
-
-while numero > -1:
-    numero = int(input("De que tabuada vc deseja ver?\nR: "))
-    cont = 0
-    print("-"*10)
-    while numero > -1:
-        cont += 1
-        print(f"{numero} x {cont} = {numero*cont}")
-        if cont == 10:
-            break
-
-print("Fim do programa")
-print("-"*10)
+while True:
+    n = int(input("Quer ver a tabuada de que número? "))
+    if n < 0:
+        break
+    print("=" * 20)
+    for c in range(1, 11):
+        print(f"{n} X {c} = {n * c}")
+    print("=" * 20)
+print("=" * 20)
+print("Fim do programa, volte sempre.")
+print("=" * 20)
