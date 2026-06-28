@@ -1,12 +1,7 @@
 ## Números sorteados
 from random import randint
-primeiro = randint(1, 10)
-segundo = randint(1, 10)
-terceiro = randint(1, 10)
-quarto = randint(1, 10)
-quinto = randint(1, 10)
 
-sorteio = primeiro, segundo, terceiro, quarto, quinto
+sorteio = randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10)
 
 print(f"os numeros sorteados foram: {sorteio}")
 print(f"O maior dentre eles é: {max(sorteio)}")
