@@ -1,9 +1,6 @@
 ##Listar par e lista impar
 
-lista = []
-listaPar = []
-listaImpar = []
-
+lista = listaPar = listaImpar = []
 num = 0
 continuar = ""
 

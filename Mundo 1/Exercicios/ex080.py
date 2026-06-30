@@ -1,28 +1,15 @@
-## Sem usar sorted
+##Sem usar o sorted
 
-numeros = [0, 0, 0, 0, 0]
-
-
-# for c in range(0, 6):
-#     num = int(input("Digite um número: "))
-#     if c == 0 or num > numeros[0]:
-#         numeros.append(num)
-#         print(f"Adicionado na posição {c}")
-#     if c == 1 or num > numeros[0]:
-#         numeros[0].append(num)
-#         print(f"Adicionado na posição {c}")
-#     if c == 2 or num > numeros[1]:
-#         numeros[1].append(num)
-#         print(f"Adicionado na posição {c}")
-#     if c == 3 or num > numeros[2]:
-#         numeros[2].append(num)
-#         print(f"Adicionado na posição {c}")
-#     if c == 4 or num > numeros[3]:
-#         numeros[3].append(num)
-#         print(f"Adicionado na posição {c}")
-#     if c == 5 or num > numeros[4]:
-#         numeros[4].append(num)
-#         print(f"Adicionado na posição {c}")
-#     if c == 6 or num > numeros[5]:
-#         numeros[5].append(num)
-#         print(f"Adicionado na posição {c}")
+numeros = []
+for c in range(0, 5):
+    n = int(input('Digite um valor: '))
+    if c == 0 or n > numeros[-1]:
+        numeros.append(n)
+    else:
+        posicao = 0
+        while posicao < len(numeros):
+            if n <= numeros[posicao]:
+                numeros.insert(posicao, n)
+                posicao += 1
+                break
+print(f"Os valores em ordem foram {numeros}")

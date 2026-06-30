@@ -1,9 +1,18 @@
 ##Verificar se tem () completas
 
-expressao = []
-num = str(input("Digite uma expressão matemática: "))
-expressao.append(num)
-if len(expressao[0]) == "(" and len(expressao[0]) == ")":
-    print("Expressão correta")
-elif len(expressao[0]) == "(" and len(expressao[0]) != ")" or len(expressao[0]) != "(" and len(expressao[0]) != ")":
-    print("Expressaão errada")
+expre = str(input("Digite uma expressão:"))
+pilhas = []
+
+for simb in expre:
+    if simb == '(':
+        pilhas.append('(')
+    elif simb == ')':
+        if len(pilhas) > 0:
+            pilhas.pop()
+        else:
+            pilhas.append(')')
+            break
+if len(pilhas) == 0:
+    print("Sua expressão é mt matematica")
+else:
+    print("Vá para humanas...")
