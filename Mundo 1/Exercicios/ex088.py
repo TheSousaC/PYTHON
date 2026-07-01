@@ -1,21 +1,26 @@
 ##MEGA SENA
 from time import sleep
 from random import randint
-
-print("="*40)
-print("MEGA SENA".center(40))
-print("="*40)
-
-sorteio = []
-jogo = []
-jogadas = int(input("Quantos jogos deseja sortear? "))
-
-for c in range(jogadas):
-    while len(jogo) < 6:
+lista = []
+jogos = []
+print("=" * 30)
+print("MEGA SENA U LA LA".center(30))
+print("=" * 30)
+quant = int(input("Quantos jogos deseja fazer? "))
+tot = 1
+while tot <= quant:
+    cont = 0
+    while True:
         num = randint(1, 60)
-        if num not in jogo:
-            jogo.append(num)
-    jogo.sort()
-    sorteio.append(jogo[:])
-    jogo.clear()
-    print(sorteio)
+        if num not in lista:
+            lista.append(num)
+            cont += 1
+        if cont >= 6:
+            break
+    lista.sort()
+    jogos.append(lista[:])
+    lista.clear()
+    tot += 1
+print("=" * 3, f'SORTEANDO {quant} jogos', '=' * 3)
+for i, l in enumerate(jogos):
+    print(f"Jogo {i+1}: {l}")

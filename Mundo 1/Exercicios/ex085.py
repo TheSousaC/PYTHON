@@ -3,7 +3,8 @@
 lista = []
 listaPar = []
 listaImpar = []
-lista = listaPar, listaImpar
+##indice:   0           1
+lista =   listaPar, listaImpar
 
 for c in range(0, 7):
     n = int(input("Digite um número bacana: "))

@@ -17,7 +17,7 @@ while True:
             menor = dados[1]
     pessoas.append(dados[:])
 
-    dados.clear()
+    dados.clear() ##Isso salva vidas, limpa o array
     print("Pessoas cadastrada com sucesso!")
     resp = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
     if resp == 'N':
