@@ -1,9 +1,9 @@
-from Exercicios.ex112.utilidadescev import moeda
 def leiaDinheiro(msg):
-    while True:
-        p = (input(msg))
-        if p.isnumeric():
-            ##Retorna e formato BR
-            return float(p.replace(',', '.'))
+    valido = False
+    while not valido:
+        entrada = str(input(msg)).replace(",", ".").strip()
+        if entrada.isalpha() or entrada == "":
+            print(f"Erro! \"{entrada}\" não é um preço válido")
         else:
-            print(f"ERRO! '{p}' não é valido")
+            valido = True
+            return float(entrada)
