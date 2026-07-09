@@ -1,6 +1,6 @@
-from Exercicios.ex115.menu import menu
-from Exercicios.ex115.cadastrar import cadastrar
-from Exercicios.ex115.Ler import lerArquivo
+from menu import menu
+from cadastrar import cadastrar
+from Ler import lerArquivo
 
 def opcao(msg):
     while True:
