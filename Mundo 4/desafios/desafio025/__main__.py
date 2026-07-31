@@ -1,9 +1,9 @@
 from transporte import *
 
 def main():
-    dist = 20
+    dist = 1
 
-    entrega = Caminhão(dist)
+    entrega = Drone(dist)
     print(f"Frete de {type(entrega).__name__} em {dist}Km = {entrega.calcular_frete()}")
 
 if __name__ == "__main__":

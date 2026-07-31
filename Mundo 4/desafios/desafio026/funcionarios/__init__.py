@@ -6,42 +6,37 @@ class Funcionario(ABC):
     sal_minimo = 1612
     inss = 7.5
 
-    def __init__(self, nome, sal_bruto, salario):
+    def __init__(self, nome = None):
         self.nome = nome
-        self.sal_bruto = sal_bruto
-        self.salario = salario
+        self.sal_bruto = 0
+        self.salario = 0
 
     @abstractmethod
     def calcular_salario(self):
         pass
 
     def analisar_salario(self):
-        correspondencia = self.sal_bruto/Funcionario.sal_minimo
-        conteudo = f"O salário de {self.nome} é de {self.calcular_salario():.2f} e corresponde a {correspondencia:.1f} salários minimos"
+        correspondencia = self.salario / Funcionario.sal_minimo
+        conteudo = f"O salário de {self.nome} é de R${self.salario:.2f} e corresponde a {correspondencia:.1f} salários minimos"
         painel = Panel(conteudo, title="Análise de Salário", width=40)
         print(painel)
 
 
 class Horista(Funcionario):
-    def __init__(self, nome, valor_hora, horas_trabalhadas):
-        super().__init__(nome, 0,0)
+    def __init__(self, nome, valor_hora = 7.37, horas_trabalhadas = 220):
+        super().__init__(nome)
         self.valor_hora = valor_hora
         self.horas_trabalhadas = horas_trabalhadas
+        self.sal_bruto = self.valor_hora * self.horas_trabalhadas
 
     def calcular_salario(self):
-        salario = self.valor_hora * self.horas_trabalhadas
-        salario = salario - (salario * self.inss)/100
-        salario = round(salario, 2)
-        return salario
+        self.salario = self.sal_bruto - (self.sal_bruto * self.inss/ 100)
 
 class Mensalista(Funcionario):
-    def __init__(self, nome, salario_bruto, salario = 0):
-        super().__init__(nome, salario_bruto, salario)
+    def __init__(self, nome, salario_bruto = Funcionario.sal_minimo):
+        super().__init__(nome)
         self.nome = nome
         self.salario_bruto = salario_bruto
-        self.salario = salario
 
     def calcular_salario(self):
-        salario = self.salario_bruto - (self.salario * self.inss)/100
-        salario = round(salario, 2)
-        return salario
+        self.salario = self.salario_bruto - (self.salario_bruto * self.inss/ 100)

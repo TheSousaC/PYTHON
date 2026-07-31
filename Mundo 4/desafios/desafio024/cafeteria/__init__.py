@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class BebidaQuente(ABC):
     def preparar(self):
         print("-- Preparando O Pedido --")
@@ -9,7 +10,7 @@ class BebidaQuente(ABC):
         print("-- Bebida Pronta --")
 
     def ferver_agua(self):
-        print("Fervendo a água a 100°C.")
+        print("1. Fervendo a água a 100°C.")
 
     @abstractmethod
     def misturar(self):
@@ -18,25 +19,28 @@ class BebidaQuente(ABC):
     @abstractmethod
     def servir(self):
         pass
+
 
 class Cafe(BebidaQuente):
 
     def misturar(self):
-        print("Passando a água pressurizada pelo pó de café moído.")
+        print("2. Passando a água pressurizada pelo pó de café moído.")
 
     def servir(self):
-        print("Servindo em xicará pequena.")
+        print("3. Servindo em xicará pequena.")
+
 
 class Cha(BebidaQuente):
     def misturar(self):
-        print("Mergulhando o sachê em ervas amargas.")
+        print("2. Mergulhando o sachê em ervas amargas.")
 
     def servir(self):
-        print("Servindo na Caneca de porcelana com limão.")
+        print("3. Servindo na Caneca de porcelana com limão.")
+
 
 class Leite(BebidaQuente):
     def misturar(self):
-        print("Passando vapor pressurizado pelo bico do leite.")
+        print("2. Passando vapor pressurizado pelo bico do leite.")
 
     def servir(self):
-        print("Servindo em uma caneca grande, já com café")
+        print("3. Servindo em uma caneca grande, já com café")
