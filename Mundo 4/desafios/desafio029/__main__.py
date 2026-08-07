@@ -5,9 +5,12 @@ def main():
     D.escrever("Amo a Lua")
     D.escrever("Quero começar a escrever poesias, e ela é a minha inspiração")
     D.escrever("Segredinho")
-    D.ler("Lula")
+    try:
+        D.ler("Lula")
+    except Exception as erro:
+        print(f"Erro: {erro}")
 
-    # inspect(D, private=True, methods=True)
+    inspect(D, private=True, methods=True)
 
 if __name__ == "__main__":
     main()

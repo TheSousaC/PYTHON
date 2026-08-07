@@ -8,10 +8,10 @@ class Termostato:
         self.__temperatura = temperatura
 
     @property
-    def ftemperatura(self): # Getter (Aparece)
-        return f"{self.__temperatura}°C"
+    def temperatura(self): # Getter (Aparece)
+        return self.__temperatura
 
-    @ftemperatura.setter
+    @temperatura.setter
     def temperatura(self, valor): # Setter (Muda o Valor)
         if valor > 30 or valor < 16:
             if valor > 30:
@@ -22,4 +22,8 @@ class Termostato:
             if valor % 1 == 0 or valor % 0.5 == 0:
                 self.__temperatura = valor
             else:
-                print("Erro, valor inválido")
+                raise ValueError(f"A temperatura de {valor} é invalida")
+
+    @property
+    def ftemperatura(self):
+        return f"{self.__temperatura}°C"

@@ -12,12 +12,12 @@ class TheBank:
         if self.__hash is None:
             senha = self.pede_senha()
             self.__hash = hashlib.sha256(str(senha).encode()).hexdigest()
-            print(f"[green]Conta de {self._titular} criada com sucesso! Saldo disponivel: [cyan]R${self.__saldo:.2f}[/cyan][/green]")
+            print(
+                f"[green]Conta de {self._titular} criada com sucesso! Saldo disponivel: [cyan]R${self.__saldo:.2f}[/cyan][/green]")
         else:
             self.__hash = hashlib.sha256(str(chave).encode()).hexdigest()
-            print(f"[green]Conta de {self._titular} criada com sucesso! Saldo disponivel: [cyan]R${self.__saldo:.2f}[/cyan][/green]")
-
-
+            print(
+                f"[green]Conta de {self._titular} criada com sucesso! Saldo disponivel: [cyan]R${self.__saldo:.2f}[/cyan][/green]")
 
     @property
     def nome(self):
@@ -34,11 +34,10 @@ class TheBank:
         else:
             print("Senha invalida!")
 
-
     def pede_senha(self) -> str:
-        senha = input("Senha: ")
+        from pwinput import pwinput
+        senha = pwinput("Senha: ").strip()
         return senha
-
 
     def validar_senha(self, senha) -> bool:
         senha_hash = hashlib.sha256(str(senha).encode()).hexdigest()
@@ -47,14 +46,15 @@ class TheBank:
         else:
             return False
 
-    def sacar(self,valor, senha = None):
+    def sacar(self, valor, senha=None):
         if senha == None:
             senha = self.pede_senha()
             senha = self.validar_senha(senha)
             if senha:
                 valor = abs(valor)
                 self.__saldo -= valor
-                print(f"[green]Foi realizado um saque de [red]R${valor:.2f}[/red] na conta de [cyan]{self._titular}[/cyan][/green]")
+                print(
+                    f"[green]Foi realizado um saque de [red]R${valor:.2f}[/red] na conta de [cyan]{self._titular}[/cyan][/green]")
             else:
                 print("Senha invalida!\nSaque invalido")
         else:
@@ -62,12 +62,13 @@ class TheBank:
             if senha:
                 valor = abs(valor)
                 self.__saldo -= valor
-                print(f"[green]Foi realizado um saque de [red]R${valor:.2f}[/red] na conta de [cyan]{self._titular}[/cyan][/green]")
+                print(
+                    f"[green]Foi realizado um saque de [red]R${valor:.2f}[/red] na conta de [cyan]{self._titular}[/cyan][/green]")
             else:
                 print("Senha invalida!\nSaque invalido")
-
 
     def depositar(self, valor):
         valor = abs(valor)
         self.__saldo += valor
-        print(f"[green]OPA, foi depositado um valor de [purple]R${valor:,.2f}[/purple] na conta de [cyan]{self._titular}[/cyan][/green]")
+        print(
+            f"[green]OPA, foi depositado um valor de [purple]R${valor:,.2f}[/purple] na conta de [cyan]{self._titular}[/cyan][/green]")

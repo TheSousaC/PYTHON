@@ -2,11 +2,19 @@ from rich import print, inspect
 
 class Diario:
     def __init__(self, senha = "Girasol"):
-        self.__senha = senha
+        self.__senha = senha.strip()
         self.__segredos = []
 
+    @property
+    def senha(self):
+        raise PermissionError("Ninguem tem permissão de ler o diário")
+
+    @senha.setter
+    def senha(self, novasenha):
+        self.__senha = novasenha.strip()
+
     def escrever(self, segredinho):
-        self.__segredos.append(segredinho)
+        self.__segredos.append(segredinho.strip())
         # print("[pruple]:shushing_face: Segredinho Guardado[/]")
 
     def ler(self, senha = None):
@@ -18,4 +26,4 @@ class Diario:
                 for segredo in self.__segredos:
                     print(f":unlock: {segredo}")
             else:
-                print("Senha incorreta!")
+                raise PermissionError("Senha invalida!")
