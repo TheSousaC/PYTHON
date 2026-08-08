@@ -1,11 +1,15 @@
-class Cliente():
-    def __init__(self, nome: str, cpf: str, email: str):
-        #Atributos de instância
-        self._nome = None #Protedigo (#)
-        self._cpf = None #Protedigo (#)
-        self._email = None #Protedigo (#)
+from rich import print, inspect
+from rich.panel import Panel
 
-        #Atributos Validados
+
+class Cliente:
+    def __init__(self, nome: str, cpf: str, email: str):
+        # Atributos de instância
+        self._nome = None  # Protedigo (#)
+        self._cpf = None  # Protedigo (#)
+        self._email = None  # Protedigo (#)
+
+        # Atributos Validados
         self.nome = nome
         self.cpf = cpf
         self.email = email
@@ -30,7 +34,6 @@ class Cliente():
         else:
             self._cpf = valor
 
-
     @property
     def email(self):
         return self._email
@@ -38,7 +41,7 @@ class Cliente():
     @email.setter
     def email(self, valor: str):
         email = valor.strip()
-        #Verifica se tem @ e divide a str entre no ponto do "@" e verifica de existem um "." no email
+        # Verifica se tem @ e divide a str entre no ponto do "@" e verifica de existem um "." no email
         if "@" not in email or "." not in email.split("@")[-1]:
             raise ValueError("O Email inválido")
         else:
@@ -47,13 +50,17 @@ class Cliente():
     def exibir_dados(self):
         return f"Nome: {self.nome} \nCPF: {self.cpf} \nEmail: {self.email}\n"
 
-class Conta():
-    #Atributos de Instância
-    def __init__(self, cliente: Cliente, numero:int, saldo:float = 0):
-        self._cliente = cliente # (#)
-        self._numero = numero # (#)
-        self._saldo = saldo # (#)
-        self._extrato = [] # (#)
+
+class Conta:
+    from datetime import datetime
+    hoje = datetime.today().date()
+
+    # Atributos de Instância
+    def __init__(self, cliente: Cliente, numero: int, saldo: float = 0):
+        self._cliente = cliente  # (#)
+        self._numero = numero  # (#)
+        self._saldo = saldo  # (#)
+        self._extrato = []  # (#)
 
     @property
     def cliente(self):
@@ -66,6 +73,7 @@ class Conta():
     @property
     def numero(self):
         return self._numero
+
     @numero.setter
     def numero(self, valor):
         raise PermissionError("Não é possivel mudar o número da conta")
@@ -77,4 +85,31 @@ class Conta():
     @saldo.setter
     def saldo(self, valor):
         raise PermissionError("Não é possivel mudar o saldo. Altere através de depósitos ou saques")
+
+    def despositar(self, valor):
+        if valor <= 0:
+            raise ValueError("O depósito deve ser maior que R$0")
+        else:
+            self._saldo += valor
+            self._extrato.append(f"Depósito de +R${valor:.2f} realizado em {Conta.hoje}")
+            print(f"Depósito de +R${valor:.2f} realizado em {Conta.hoje}")
+
+    def sacar(self, valor: float):
+        if valor <= 0:
+            raise ValueError("O valor do saque deve ser maior que R$0.00")
+        else:
+            self._saldo -= valor
+            self._extrato.append(f"Saque de -R${valor:.,2f} realizado em {Conta.hoje}.")
+            print(f"Saque de -R${valor:.2f} realizado em {Conta.hoje}")
+
+    def exibir_extratos(self):
+        conteudo = ""
+        for movimento in self._extrato:
+            conteudo += f"{movimento}"
+        if self._saldo <= 0:
+            conteudo += f"\n[blue] Saldo atual: [red]{self._saldo}[/red][/blue]"
+        else:
+            conteudo += f"\n[blue] Saldo atual: [red]{self._saldo}[/red][/blue]"
+        painel = Panel(conteudo,title=f"[blue]Extrato da conta: [green]{self._numero}[/green][blue]", width=60)
+        print(painel)
 

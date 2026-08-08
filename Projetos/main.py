@@ -1,9 +1,9 @@
 from classes.ClienteConta import *
-from rich import print, inspect
 
 def main():
-    Cliente01 = Cliente("Gabriel", "09876543210", "costasousagabriel@gmail.com")
-    Conta01 = Conta(Cliente01, 7008, 1_000)
-    inspect(Conta01, private=True)
+    Cl01 = Cliente("Gabriel", "09876543210", "costasousagabriel@gmail.com")
+    Cnt01 = Conta(Cl01, 7008, 1_000)
+    Cnt01.despositar(500)
+    Cnt01.exibir_extratos()
 if __name__ == "__main__":
     main()
