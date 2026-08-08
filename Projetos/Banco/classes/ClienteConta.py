@@ -92,15 +92,17 @@ class Conta:
         else:
             self._saldo += valor
             self._extrato.append(f"Depósito de +R${valor:.2f} realizado em {Conta.hoje}")
-            print(f"Depósito de +R${valor:.2f} realizado em {Conta.hoje}")
+            print(f"Depósito de [green]+R${valor:.2f}[/] realizado em {Conta.hoje}")
 
     def sacar(self, valor: float):
         if valor <= 0:
-            raise ValueError("O valor do saque deve ser maior que R$0.00")
+            raise ValueError("[red]O valor do saque deve ser maior que R$0.00[/]")
+        if valor > self.saldo:
+            raise ValueError("[red]Saque insuficiente[/]")
         else:
             self._saldo -= valor
             self._extrato.append(f"Saque de -R${valor:.,2f} realizado em {Conta.hoje}.")
-            print(f"Saque de -R${valor:.2f} realizado em {Conta.hoje}")
+            print(f"Saque de [red]-R${valor:.2f}[/] realizado em {Conta.hoje}")
 
     def exibir_extratos(self):
         conteudo = ""
