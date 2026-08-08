@@ -1,7 +1,4 @@
-from abc import ABC
-
-
-class Cliente(ABC):
+class Cliente():
     def __init__(self, nome: str, cpf: str, email: str):
         #Atributos de instância
         self._nome = None #Protedigo (#)
@@ -50,6 +47,34 @@ class Cliente(ABC):
     def exibir_dados(self):
         return f"Nome: {self.nome} \nCPF: {self.cpf} \nEmail: {self.email}\n"
 
-# class Conta(Cliente):
-#     def __init__(self, nome:str, cpf:str, email:str, numero:int, saldo:float = 0, extrato:float):
-#         super().__init__(nome, cpf, email)
+class Conta():
+    #Atributos de Instância
+    def __init__(self, cliente: Cliente, numero:int, saldo:float = 0):
+        self._cliente = cliente # (#)
+        self._numero = numero # (#)
+        self._saldo = saldo # (#)
+        self._extrato = [] # (#)
+
+    @property
+    def cliente(self):
+        return self._cliente
+
+    @cliente.setter
+    def cliente(self, valor):
+        raise PermissionError("Você não pode mudar o cliente!")
+
+    @property
+    def numero(self):
+        return self._numero
+    @numero.setter
+    def numero(self, valor):
+        raise PermissionError("Não é possivel mudar o número da conta")
+
+    @property
+    def saldo(self):
+        return self._saldo
+
+    @saldo.setter
+    def saldo(self, valor):
+        raise PermissionError("Não é possivel mudar o saldo. Altere através de depósitos ou saques")
+
