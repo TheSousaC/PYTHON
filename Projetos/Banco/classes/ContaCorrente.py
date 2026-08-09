@@ -20,9 +20,9 @@ class ContaCorrente(Conta):
         from datetime import datetime
         hoje = datetime.today().date()
         if valor <= 0:
-            raise ValueError("O valor do saque deve ser maior que 0")
+            raise ValueError("O valor do saque deve ser maior que [red]0[/]")
         if valor > self._saldo + self.limite_cheque_especial:
-            raise PermissionError("Saldo Insuficiente")
+            raise PermissionError("[red]Saldo Insuficiente[/red]")
         else:
             self._saldo -= valor
             self._extrato.append(f"Saque de [red]-R${valor:.2f}[/] realizado em {hoje}\n")

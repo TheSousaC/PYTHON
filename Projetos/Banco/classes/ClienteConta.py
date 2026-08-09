@@ -30,7 +30,7 @@ class Cliente:
     def cpf(self, valor: str):
         valor = valor.strip()
         if len(valor) != 11 or not valor.isdigit():
-            raise ValueError("CPF tem que ter 11 dígitos e somente números")
+            raise ValueError("[red]CPF tem que ter 11 dígitos e somente números[/red]")
         else:
             self._cpf = valor
 
@@ -43,7 +43,7 @@ class Cliente:
         email = valor.strip()
         # Verifica se tem @ e divide a str entre no ponto do "@" e verifica de existem um "." no email
         if "@" not in email or "." not in email.split("@")[-1]:
-            raise ValueError("O Email inválido")
+            raise ValueError("[red]O Email inválido[/red]")
         else:
             self._email = email
 
@@ -66,29 +66,17 @@ class Conta:
     def cliente(self):
         return self._cliente
 
-    @cliente.setter
-    def cliente(self, valor):
-        raise PermissionError("Você não pode mudar o cliente!")
-
     @property
     def numero(self):
         return self._numero
-
-    @numero.setter
-    def numero(self, valor):
-        raise PermissionError("Não é possivel mudar o número da conta")
 
     @property
     def saldo(self):
         return self._saldo
 
-    @saldo.setter
-    def saldo(self, valor):
-        raise PermissionError("Não é possivel mudar o saldo. Altere através de depósitos ou saques")
-
     def depositar(self, valor):
         if valor <= 0:
-            raise ValueError("O depósito deve ser maior que R$0")
+            raise ValueError("O depósito deve ser maior que [red]R$0[/red]")
         else:
             self._saldo += valor
             self._extrato.append(f"Depósito de [green]+R${valor:.2f}[/] realizado em {Conta.hoje}.\n")
@@ -101,7 +89,7 @@ class Conta:
             raise ValueError("[red]Saque insuficiente[/]")
         else:
             self._saldo -= valor
-            self._extrato.append(f"Saque de -R${valor:.2f} realizado em {Conta.hoje}.\n")
+            self._extrato.append(f"\nSaque de [red]-R${valor:.2f}[/red] realizado em {Conta.hoje}.\n")
             print(f"Saque de [red]-R${valor:.2f}[/] realizado em {Conta.hoje}")
 
     def exibir_extrato(self):
@@ -111,6 +99,6 @@ class Conta:
         if self._saldo <= 0:
             conteudo += f"\n[blue] Saldo atual: [red]{self._saldo}[/red][/blue]"
         else:
-            conteudo += f"\n[blue] Saldo atual: [red]{self._saldo}[/red][/blue]"
+            conteudo += f"\n[blue] Saldo atual: [green]{self._saldo}[/green][/blue]"
         painel = Panel(conteudo, title=f"[blue]Extrato da conta: [green]{self._numero}[/green][blue]", width=60)
         print(painel)
