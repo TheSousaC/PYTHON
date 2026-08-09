@@ -1,17 +1,18 @@
 from classes.ClienteConta import Conta
 from rich import print
+
+
 class ContaCorrente(Conta):
-    def __init__(self,cliente, numero, saldo=0, limite_cheque_especial = None):
+    def __init__(self, cliente, numero, saldo=0, limite_cheque_especial=None):
         super().__init__(cliente, numero, saldo)
         self.limite_cheque_especial = limite_cheque_especial
-
 
     @property
     def limite_cheque_especial(self):
         return self._limite_cheque_especial
 
     @limite_cheque_especial.setter
-    def limite_cheque_especial(self,valor):
+    def limite_cheque_especial(self, valor):
         valor = abs(valor)
         self._limite_cheque_especial = valor
 

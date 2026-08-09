@@ -112,6 +112,5 @@ class Conta:
             conteudo += f"\n[blue] Saldo atual: [red]{self._saldo}[/red][/blue]"
         else:
             conteudo += f"\n[blue] Saldo atual: [red]{self._saldo}[/red][/blue]"
-        painel = Panel(conteudo,title=f"[blue]Extrato da conta: [green]{self._numero}[/green][blue]", width=60)
+        painel = Panel(conteudo, title=f"[blue]Extrato da conta: [green]{self._numero}[/green][blue]", width=60)
         print(painel)
-
