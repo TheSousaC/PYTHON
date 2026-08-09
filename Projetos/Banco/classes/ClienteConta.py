@@ -86,12 +86,12 @@ class Conta:
     def saldo(self, valor):
         raise PermissionError("Não é possivel mudar o saldo. Altere através de depósitos ou saques")
 
-    def despositar(self, valor):
+    def depositar(self, valor):
         if valor <= 0:
             raise ValueError("O depósito deve ser maior que R$0")
         else:
             self._saldo += valor
-            self._extrato.append(f"Depósito de +R${valor:.2f} realizado em {Conta.hoje}")
+            self._extrato.append(f"Depósito de [green]+R${valor:.2f}[/] realizado em {Conta.hoje}.\n")
             print(f"Depósito de [green]+R${valor:.2f}[/] realizado em {Conta.hoje}")
 
     def sacar(self, valor: float):
@@ -101,10 +101,10 @@ class Conta:
             raise ValueError("[red]Saque insuficiente[/]")
         else:
             self._saldo -= valor
-            self._extrato.append(f"Saque de -R${valor:.,2f} realizado em {Conta.hoje}.")
+            self._extrato.append(f"Saque de -R${valor:.2f} realizado em {Conta.hoje}.\n")
             print(f"Saque de [red]-R${valor:.2f}[/] realizado em {Conta.hoje}")
 
-    def exibir_extratos(self):
+    def exibir_extrato(self):
         conteudo = ""
         for movimento in self._extrato:
             conteudo += f"{movimento}"
